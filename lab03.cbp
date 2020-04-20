@@ -37,6 +37,7 @@
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="main.cpp" />
+		<Unit filename="svgheader.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

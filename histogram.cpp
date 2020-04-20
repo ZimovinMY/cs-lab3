@@ -1,4 +1,5 @@
 #include "histogram.h"
+#include "svgheader.h"
 void
 find_minmax(vector<double> numbers, double& min, double& max){
    if (numbers.size() != 0)
