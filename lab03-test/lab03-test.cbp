@@ -31,9 +31,9 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="../lab03/histogram.cpp" />
-		<Unit filename="../lab03/histogram.h" />
-		<Unit filename="../lab03/test.cpp" />
+		<Unit filename="../histogram.cpp" />
+		<Unit filename="../histogram.h" />
+		<Unit filename="../test.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
