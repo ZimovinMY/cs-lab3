@@ -1,8 +1,9 @@
 #include <iostream>
 #include <vector>
 #include "histogram.h"
-#include "svgheader.h"
+#include "svg.h"
 using namespace std;
+
 vector<double>
 input_numbers(size_t count) {
     vector<double> result(count);
@@ -11,6 +12,7 @@ input_numbers(size_t count) {
     }
     return result;
 }
+
 vector <size_t>
 make_histogram(vector <double> numbers,size_t bin_count,double min,double max){
     vector<size_t> bins(bin_count);
@@ -25,6 +27,7 @@ make_histogram(vector <double> numbers,size_t bin_count,double min,double max){
     }
     return(bins);
 }
+
 void
 show_histogram_text(vector<size_t>bins){
     const size_t SCREEN_WIDTH = 80;
@@ -66,6 +69,7 @@ show_histogram_text(vector<size_t>bins){
         cout << '\n';
     }
 }
+
 int
 main() {
     size_t number_count;

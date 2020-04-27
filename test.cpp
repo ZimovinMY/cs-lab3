@@ -9,7 +9,7 @@ test_positive() {
     assert(max == 3);
 }
 void
-test_positive1() {
+test_negative() {
     double min = 0;
     double max = 0;
     find_minmax({-1, -2, -3}, min, max);
@@ -17,7 +17,7 @@ test_positive1() {
     assert(max == -1);
 }
 void
-test_positive2() {
+test_same() {
     double min = 0;
     double max = 0;
     find_minmax({1, 1, 1}, min, max);
@@ -25,7 +25,7 @@ test_positive2() {
     assert(max == 1);
 }
 void
-test_positive3() {
+test_one() {
     double min = 0;
     double max = 0;
     find_minmax({1}, min, max);
@@ -33,7 +33,7 @@ test_positive3() {
     assert(max == 1);
 }
 void
-test_positive4() {
+test_empty() {
     double min = 0;
     double max = 0;
     find_minmax({}, min, max);
@@ -43,8 +43,8 @@ test_positive4() {
 int
 main() {
     test_positive();
-    test_positive1();
-    test_positive2();
-    test_positive3();
-    test_positive4();
+    test_negative();
+    test_same();
+    test_one();
+    test_empty();
 }
