@@ -1,14 +1,16 @@
 # depslib dependency file v1.0
-1589493752 source:c:\users\acer\desktop\lab3\lab03\main.cpp
+1589496472 source:c:\users\acer\desktop\lab3\lab03\main.cpp
 	<iostream>
 	<vector>
 	"histogram.h"
 	"svg.h"
 
-1587390698 c:\users\acer\desktop\lab3\lab03\histogram.h
+1589496255 c:\users\acer\desktop\lab3\lab03\histogram.h
 	<vector>
 
-1587988911 source:c:\users\acer\desktop\lab3\lab03\histogram.cpp
+1589496385 source:c:\users\acer\desktop\lab3\lab03\histogram.cpp
+	<vector>
+	<iostream>
 	"histogram.h"
 
 1587395937 c:\users\acer\desktop\lab3\lab03\svgheader.h
@@ -18,10 +20,10 @@
 1587931160 source:c:\users\acer\desktop\lab3\lab03\svgfun.cpp
 	"svgheader.h"
 
-1587981997 c:\users\acer\desktop\lab3\lab03\svg.h
+1589496454 c:\users\acer\desktop\lab3\lab03\svg.h
 	<iostream>
 	<vector>
 
-1589485338 source:c:\users\acer\desktop\lab3\lab03\svg.cpp
+1589494784 source:c:\users\acer\desktop\lab3\lab03\svg.cpp
 	"svg.h"
 

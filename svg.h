@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+
 void svg_begin(double width, double height);
 void svg_end();
 void svg_rect(double x, double y, double width, double height,string stroke, string fill);
