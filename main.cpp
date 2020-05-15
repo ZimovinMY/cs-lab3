@@ -38,11 +38,21 @@ read_input(istream& in,bool prompt) {
 }
 
 int
-main() {
+main(int argc, char* argv[]) {
+
+    if (argc > 1)
+    {
+        cout<<"argc="<<argc<<endl;
+        cout<<"argv[0]="<<argv[0];
+        return(0);
+    }
+    else
+    {
     curl_global_init(CURL_GLOBAL_ALL);
     const auto data = read_input(cin,true);
     const auto bins = make_histogram(data);
     show_histogram_svg(bins);
     //show_histogram_text(bins);
     return 0;
+    }
 }
