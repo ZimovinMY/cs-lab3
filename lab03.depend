@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1589550002 source:c:\users\acer\desktop\lab3\lab03\main.cpp
+1589552051 source:c:\users\acer\desktop\lab3\lab03\main.cpp
 	<sstream>
 	<string>
 	<curl/curl.h>
