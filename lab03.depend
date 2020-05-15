@@ -1,5 +1,6 @@
 # depslib dependency file v1.0
-1589497295 source:c:\users\acer\desktop\lab3\lab03\main.cpp
+1589542180 source:c:\users\acer\desktop\lab3\lab03\main.cpp
+	<curl/curl.h>
 	<iostream>
 	<vector>
 	"histogram.h"
@@ -26,4 +27,43 @@
 
 1589494784 source:c:\users\acer\desktop\lab3\lab03\svg.cpp
 	"svg.h"
+
+1587991348 c:\users\acer\desktop\lab3\lab03\curl\include\curl\curl.h
+	"curlver.h"
+	"system.h"
+	<stdio.h>
+	<limits.h>
+	<osreldate.h>
+	<sys/types.h>
+	<time.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+	<sys/select.h>
+	<sys/socket.h>
+	<sys/time.h>
+	<support/SupportDefs.h>
+	"easy.h"
+	"multi.h"
+	"urlapi.h"
+	"typecheck-gcc.h"
+
+1588129392 c:\users\acer\desktop\lab3\lab03\curl\include\curl\curlver.h
+
+1587548874 c:\users\acer\desktop\lab3\lab03\curl\include\curl\system.h
+	<winsock2.h>
+	<windows.h>
+	<ws2tcpip.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/poll.h>
+
+1587548874 c:\users\acer\desktop\lab3\lab03\curl\include\curl\easy.h
+
+1587548874 c:\users\acer\desktop\lab3\lab03\curl\include\curl\multi.h
+	"curl.h"
+
+1587548874 c:\users\acer\desktop\lab3\lab03\curl\include\curl\urlapi.h
+	"curl.h"
+
+1587548874 c:\users\acer\desktop\lab3\lab03\curl\include\curl\typecheck-gcc.h
 
