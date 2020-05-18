@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1589804749 source:c:\users\acer\desktop\lab3\lab03\main.cpp
+1589808334 source:c:\users\acer\desktop\lab3\lab03\main.cpp
 	<iostream>
 	<vector>
 	"histogram.h"
@@ -23,6 +23,19 @@
 	<iostream>
 	<vector>
 
-1589799216 source:c:\users\acer\desktop\lab3\lab03\svg.cpp
+1589808100 source:c:\users\acer\desktop\lab3\lab03\svg.cpp
 	"svg.h"
+	"system_info.h"
+
+1589808329 c:\users\acer\desktop\lab3\lab03\system_info.h
+	<sstream>
+	<iostream>
+	<string>
+
+1589808457 source:c:\users\acer\desktop\lab3\lab03\system_info.cpp
+	<windows.h>
+	<sstream>
+	<iostream>
+	<string>
+	"system_info.h"
 
