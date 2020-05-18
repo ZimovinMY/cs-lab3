@@ -1,5 +1,7 @@
 # depslib dependency file v1.0
-1589552051 source:c:\users\acer\desktop\lab3\lab03\main.cpp
+152891416 <<<<<<< HEAD
+
+1589811987 source:c:\users\acer\desktop\lab3\lab03\main.cpp
 	<sstream>
 	<string>
 	<curl/curl.h>
@@ -7,14 +9,31 @@
 	<vector>
 	"histogram.h"
 	"svg.h"
+	<windows.h>
 
-1589496255 c:\users\acer\desktop\lab3\lab03\histogram.h
+1589552051 .h>
+
+1589808100 04P2
+	<iostream>
+	<vector>
+	"histogram.h"
+	"svg.h"
+	<windows.h>
+	"histogram.h"
+	"svg.h"
+	"system_info.h"
+
+1587931160 D
+
+1589811974 c:\users\acer\desktop\lab3\lab03\histogram.h
 	<vector>
 
-1589496563 source:c:\users\acer\desktop\lab3\lab03\histogram.cpp
+1589811974 source:c:\users\acer\desktop\lab3\lab03\histogram.cpp
 	<vector>
 	<iostream>
 	"histogram.h"
+
+1589496563 
 
 1587395937 c:\users\acer\desktop\lab3\lab03\svgheader.h
 	<iostream>
@@ -23,12 +42,25 @@
 1587931160 source:c:\users\acer\desktop\lab3\lab03\svgfun.cpp
 	"svgheader.h"
 
-1589496454 c:\users\acer\desktop\lab3\lab03\svg.h
+1589811974 c:\users\acer\desktop\lab3\lab03\svg.h
 	<iostream>
 	<vector>
 
-1589494784 source:c:\users\acer\desktop\lab3\lab03\svg.cpp
+1589811987 source:c:\users\acer\desktop\lab3\lab03\svg.cpp
 	"svg.h"
+	"system_info.h"
+
+1589811987 c:\users\acer\desktop\lab3\lab03\system_info.h
+	<sstream>
+	<iostream>
+	<string>
+
+1589811987 source:c:\users\acer\desktop\lab3\lab03\system_info.cpp
+	<windows.h>
+	<sstream>
+	<iostream>
+	<string>
+	"system_info.h"
 
 1587991348 c:\users\acer\desktop\lab3\lab03\curl\include\curl\curl.h
 	"curlver.h"

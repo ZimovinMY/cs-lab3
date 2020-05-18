@@ -1,1 +1,10 @@
 /curl
+/obj
+/bin
+default.workspace.layout
+default.workspace
+lab03.depend
+lab03.layout
+/lab03-test
+test.cpp
+test.o

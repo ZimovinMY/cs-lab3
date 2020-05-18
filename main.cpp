@@ -5,8 +5,8 @@
 #include <vector>
 #include "histogram.h"
 #include "svg.h"
+#include <windows.h>
 using namespace std;
-
 vector<double>
 input_numbers(istream& in,size_t count) {
     vector<double> result(count);
