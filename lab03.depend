@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1589800973 source:c:\users\acer\desktop\lab3\lab03\main.cpp
+1589804749 source:c:\users\acer\desktop\lab3\lab03\main.cpp
 	<iostream>
 	<vector>
 	"histogram.h"

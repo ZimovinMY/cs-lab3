@@ -75,8 +75,25 @@ show_histogram_text(vector<size_t>bins){
 
 int
 main() {
-    printf("Version is  %x\n", GetVersion());
-    printf("Version is  %u\n", GetVersion());
+    DWORD mask = 0x0000ffff;
+    DWORD mask_major = 0b00000000'00000000'00000000'11111111;
+    DWORD info = GetVersion();
+    DWORD platform = info >> 16;
+    DWORD version = info & mask;
+    DWORD version_major = version & mask_major;
+    DWORD version_minor = version >> 8;
+    printf("Windows (10) version is %u.\n", version);
+    printf("Windows (16) version is %x.\n", version);
+    printf("Platform is %u.\n", platform);
+    printf("Windows major version is %u.\n", version_major);
+    printf("Windows minor version is %u.\n", version_minor);
+
+    if ((info & 0x40000000) == 0) {
+        DWORD build = platform;
+        printf("Windows build is %u.\n", build);
+    }
+    printf("Windows v%u.%u (build %u)\n",version_major,version_minor,platform);
+    return 0;
     /*size_t number_count;
     cerr << "Enter number count: ";
     cin >> number_count;
