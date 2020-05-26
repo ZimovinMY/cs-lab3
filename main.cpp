@@ -7,27 +7,76 @@
 #include "svg.h"
 #include <windows.h>
 using namespace std;
+
+struct Options
+{
+    bool use_text;
+    bool use_svg;
+    bool use_help;
+    char* url;
+};
+
+Options parse_args(int argc, char** argv)
+{
+    Options opt;
+    opt.url=0;
+    opt.use_help = false;
+    opt.use_text = false;
+    opt.use_svg = false;
+    for (int i = 1; i < argc; i++)
+    {
+        if (argv[i][0] == '-')
+        {
+            if (strcmp(argv[i],"-format") == 0)
+            {
+                if (strcmp(argv[i+1], "text") == 0)
+                {
+                    opt.use_text = true;
+                    i++;
+                }
+                else if (strcmp(argv[i+1], "svg") == 0)
+                {
+                    opt.use_svg = true;
+                    i++;
+                }
+                else
+                {
+                    opt.use_help = true;
+                }
+            }
+        }
+        else
+        {
+            opt.url=argv[i];
+        }
+    }
+    return opt;
+}
+
 vector<double>
-input_numbers(istream& in,size_t count) {
+input_numbers(istream& in,size_t count)
+{
     vector<double> result(count);
-    for (size_t i = 0; i < count; i++) {
+    for (size_t i = 0; i < count; i++)
+    {
         in >> result[i];
     }
     return result;
 }
 
 Input
-read_input(istream& in,bool prompt) {
+read_input(istream& in,bool prompt)
+{
     Input data;
     size_t number_count;
     if(prompt)
     {
-    cerr << "Enter number count: ";
-    in >> number_count;
-    cerr << "Enter numbers: ";
-    data.numbers = input_numbers(in, number_count);
-    cerr << "Enter column count: ";
-    in >> data.bin_count;
+        cerr << "Enter number count: ";
+        in >> number_count;
+        cerr << "Enter numbers: ";
+        data.numbers = input_numbers(in, number_count);
+        cerr << "Enter column count: ";
+        in >> data.bin_count;
     }
     else
     {
@@ -50,13 +99,15 @@ write_data(void* items, size_t item_size, size_t item_count, void* ctx)
 }
 
 Input
-download(const string& address) {
+download(const string& address)
+{
     stringstream buffer;
 
     curl_global_init(CURL_GLOBAL_ALL);
 
     CURL *curl = curl_easy_init();
-    if(curl) {
+    if(curl)
+    {
         CURLcode res;
         curl_easy_setopt(curl, CURLOPT_URL, address.c_str());
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_data);
@@ -68,23 +119,37 @@ download(const string& address) {
             exit(1);
         }
     }
-   curl_easy_cleanup(curl);
-   return read_input(buffer, false);
+    curl_easy_cleanup(curl);
+    return read_input(buffer, false);
 }
 
 int
-main(int argc, char* argv[]) {
+main(int argc, char* argv[])
+{
     Input input;
-   if (argc > 1)
+    Options opt;
+    opt=parse_args(argc,argv);
+    if(opt.use_help)
     {
-        input = download(argv[1]);
+        cerr<<"Error of input: use -format text or -format svg"<<endl;
+        exit(2);
+    }
+    if (opt.url)
+    {
+        input = download(opt.url);
     }
     else
     {
         input = read_input(cin, true);
     }
     const auto bins = make_histogram(input);
-    show_histogram_svg(bins);
-    //show_histogram_text(bins);
+    if(opt.use_text)
+    {
+        show_histogram_text(bins);
+    }
+    if(opt.use_svg)
+    {
+        show_histogram_svg(bins);
+    }
     return 0;
 }
