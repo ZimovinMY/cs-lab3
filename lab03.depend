@@ -1,7 +1,7 @@
 # depslib dependency file v1.0
 152891416 <<<<<<< HEAD
 
-1590492906 source:c:\users\acer\desktop\lab3\lab03\main.cpp
+1590999937 source:c:\users\acer\desktop\lab3\lab03\main.cpp
 	<sstream>
 	<string>
 	<curl/curl.h>
@@ -42,11 +42,11 @@
 1587931160 source:c:\users\acer\desktop\lab3\lab03\svgfun.cpp
 	"svgheader.h"
 
-1589811974 c:\users\acer\desktop\lab3\lab03\svg.h
+1590999937 c:\users\acer\desktop\lab3\lab03\svg.h
 	<iostream>
 	<vector>
 
-1589811987 source:c:\users\acer\desktop\lab3\lab03\svg.cpp
+1591000959 source:c:\users\acer\desktop\lab3\lab03\svg.cpp
 	"svg.h"
 	"system_info.h"
 
